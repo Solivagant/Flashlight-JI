@@ -1,0 +1,32 @@
+NAME="Nivel 2"
+BG="bkg.jpg"
+WALL_TEX="brick.png"
+BG_TEX="cave.png"
+LEVEL_HEIGHT="26"
+LEVEL_WIDTH="42"
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW
+W                                       W
+W                                       W
+W	WWWWWWWW                            W
+W                                       W
+W                                       W
+W        I                              W
+W      WWWWWWWW                         W
+W                                       W
+W                                       W
+W          WWWWWWWW                     W
+W                                       W
+W            WWWWWWWW                   W
+W                                       W
+W                   I                   W
+W                 WWWWWWWW              W
+W                                       W
+W                       WWWW            W
+W                         WWWW          W
+W                                       W
+W                          WWWW         W
+W                            WWWW       W
+W                               WW      W
+W                                    WWWW
+W             I           I             W
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW

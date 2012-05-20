@@ -1,0 +1,32 @@
+NAME="Nivel 1"
+BG="background.png"
+WALL_TEXn="cave4.png"
+WALL_TEXd="cave4d.png"
+WALL_TEXe="cave4e.png"
+WALL_TEXs="cave4s.png"
+BG_TEX="cave.png"
+WALL_HEIGHT="32"
+WALL_WIDTH="32"
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"VHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHV
+W                               W"V                               V
+W       WWW           p         W"V       EHK                     V
+W         W                     W"V         V                     V
+W D R     W                     W"V V       V                     V
+W WWW  WWWW                     W"V XHR  EHHC                     V
+W              I          I     W"V                               V
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWW  W"VHHHHHHHHHHHHHHHHHHHHHHHHHHHHR  V
+W                               W"V                               V
+W                               W"V                               V
+W               WWWWWWWWWWWWWWWWW"V               EHHHHHHHHHHHHHHHC
+W   P                           W"V                               V
+W                              RW"V                               V
+W        WWWWWWWWWWWWWWWWWWWWWWWW"V        EHHHHHHHHHHHHHHHHHHHHHHC
+W                               W"V                               V
+W                               W"V                               V
+WWWWW  WWWW                     W"VHHHH  HHHH                     V
+W                               W"V                               V
+W   R     I                     W"V                               V
+WWWWWWWWWWW                     W"CHHHHHHHHHR                     V
+W       WWWW                    W"V       HHHR                    V
+WI                     P       RW"V                               V
+WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"VHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHV
