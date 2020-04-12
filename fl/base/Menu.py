@@ -3,6 +3,8 @@ from fl.globals import * #@UnusedWildImport
 from fl.inputListener import * #@UnusedWildImport
 from fl.menu.MenuCreator import cMenu
 from fl.menu.menu_options import MENUSTART, MenuNewGame, MenuMulti, MenuOptions
+import os
+
 global screen, background, height, width
 
 """Gere o Menu inicial"""
@@ -14,21 +16,28 @@ class Menu(object):
 
         self.menu = cMenu(MENUSTART, self.screen, self.background)
 
+       
+        path = '' + os.getcwd() + '/res/music/menu1.ogg'
         # criar recurso audio e fazer load do audio menu inicial e dos
         # efeitos menu
         self.audio = AudioResource.AudioResource()
-        self.audio.AddMusic('res/music/menu1.mp3', 'menu1')
+        print "test"
+        self.audio.AddMusic(path, 'menu1')
+        print "test"
 
-        self.audio.AddSoundFXList([('res/music/menuselect.wav', 'menuselect'),
-                ('res/music/gunshot.wav', 'gunshot'), ])
-        
+        self.audio.AddSoundFXList([(os.getcwd() + '/res/music/menuselect.wav', 'menuselect'),
+                (os.getcwd() + '/res/music/gunshot.wav', 'gunshot'), ])
+        print "test"
+
         #INICIALIZaCAO DAS VARIAVEIS DE ESTADO DO MENU E DO LISTENER
         self.input = inputListener()
+        
 
         #Iniciar musica menu
         self.audio.get_music('menu1').load_music()
         pygame.mixer.music.play(-1)
         
+
         self.gameIsRunning = False
         
         self.state = 0

@@ -47,7 +47,7 @@ class inputListener(object):
         for event in pygame.event.get():
             input = 0
             if event.type == pygame.QUIT:
-                self.toQuit = True
+                pygame.quit();
             elif event.type == KEYDOWN:
                 if not self.inputs.get(event.key, -1)==self.HELD:
                     input = {event.key: self.DOWN}

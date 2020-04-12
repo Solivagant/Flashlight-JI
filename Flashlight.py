@@ -40,13 +40,21 @@ class Main(object):
         self.menu = Menu(self.screen) 
         self.stat = Stat(self.screen)
         self.client = None
-        
+    
+        print "test"
         self.audio = AudioResource()
         
+
         self.loop()
         os._exit(0)
         
+
     def loop(self):
+        for x in range(10000):
+            pass
+        
+
+
         self.game.isMulti = False
         running = True
         while running:
@@ -84,11 +92,13 @@ class Main(object):
                         self.game.creation_player()
                         
                     #Carregar Audio Resource
-                    self.audio.AddMusic('res/music/MusicAction.mp3', 'GameAction')
+                    print "test"
+                    self.audio.AddMusic(os.getcwd() + '/res/music/MusicAction.ogg', 'GameAction')
                     self.audio.get_music('GameAction').set_volume(0.5)
                     self.audio.get_music('GameAction').load_music()
                     pygame.mixer.music.play(-1)
-                    
+
+
                     self.game.load_level("level1");
                     self.MainState = STATE_GAME
                     self.game.isMulti = False
@@ -97,12 +107,14 @@ class Main(object):
                     if not self.customization:
                         self.game.creation_player()
                         
+                    print "test"
                      #Carregar Audio Resource
-                    self.audio.AddMusic('res/music/MusicAction.mp3', 'GameAction')
+                    self.audio.AddMusic(os.getcwd() + '/res/music/MusicAction.ogg', 'GameAction')
                     self.audio.get_music('GameAction').set_volume(0.5)
                     self.audio.get_music('GameAction').load_music()
                     pygame.mixer.music.play(-1)
-                       
+                    
+
                     self.game.load_level("level1");
                     self.MainState = STATE_GAME
                     self.game.isMulti = False
@@ -110,13 +122,15 @@ class Main(object):
                 elif(MenuState == START_SINGLE_GAME_HARD):
                     if not self.customization:
                         self.game.creation_player()
-                        
+                    
+                    print "test"
                     #Carregar Audio Resource
-                    self.audio.AddMusic('res/music/MusicAction.mp3', 'GameAction')
+                    self.audio.AddMusic(os.getcwd() + '/res/music/MusicAction.ogg', 'GameAction')
                     self.audio.get_music('GameAction').set_volume(0.5)
                     self.audio.get_music('GameAction').load_music()
                     pygame.mixer.music.play(-1)
-                    
+
+
                     self.game.load_level("level1");
                     self.MainState = STATE_GAME
                     self.game.isMulti = False
@@ -128,13 +142,15 @@ class Main(object):
                     if not self.customization:
                         self.game.creation_player()
                     #Carregar o nivel 1
-                    
+                                        
+                    print "test"
                     #Carregar Audio Resource
-                    self.audio.AddMusic('res/music/MusicAction.mp3', 'GameAction')
+                    self.audio.AddMusic(os.getcwd() + 'res/music/MusicAction.ogg', 'GameAction')
                     self.audio.get_music('GameAction').set_volume(0.5)
                     self.audio.get_music('GameAction').load_music()
                     pygame.mixer.music.play(-1)
                     
+
                     self.game.load_level("level1");
                     self.MainState = STATE_GAME
                     self.game.isMulti = True
@@ -153,4 +169,5 @@ class Main(object):
             elif(self.MainState==STATE_STATS):
                 if self.stat.update() == GAME_CONTINUE:
                     self.MainState = STATE_GAME
+
 Main()

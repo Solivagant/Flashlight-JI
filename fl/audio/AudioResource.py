@@ -31,6 +31,8 @@ class AudioResource(object):
 
     #Adiciona um novo Music ao buffer dos Music
     def AddMusic(self, path, name):
+        print path
+        print name
         self.MusicBuffer.append(Music.Music(path,name))
 
     #Remove um Sound FX do Buffer
@@ -50,6 +52,7 @@ class AudioResource(object):
         try:
             for x in soundlist:
                 self.SoundBuffer.append(SoundFx.SoundFx(x[0], x[1]))
+                print x
         except pygame.error, message:
             print "Didn't find a specific Music File"
             raise SystemExit, message
@@ -59,6 +62,7 @@ class AudioResource(object):
         try:
             for x in musiclist:
                 self.MusicBuffer.append(Music(x[0], x[1]))
+                print x
         except pygame.error, message:
             print "Didn't find a specific Music File"
             raise SystemExit, message
@@ -72,6 +76,8 @@ class AudioResource(object):
     #Retorna um Music com nome X
     def get_music(self, name):
         for x in self.MusicBuffer:
+            print x.get_name()
+            print name
             if(x.get_name() == name):
                 return x
     

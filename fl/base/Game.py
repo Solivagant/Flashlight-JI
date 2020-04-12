@@ -14,6 +14,8 @@ from fl.items.Weapon2 import * #@UnusedWildImport
 from fl.gameobject.Enemy import Enemy
 from fl.ai.FSM import SimpleFSM
 from fl.items.RPG import RPG
+import cProfile as profile
+from profilehooks import profile
 
 """Gestor de Jogo
    1 - creation(): inicializa todos os arrays, grupos de sprites, superficies e 
@@ -84,6 +86,8 @@ class Game(object):
 
     
     """recebe inputs (teclado e rato) e altera o estado dos objectos do jogo"""
+
+    
     def update(self):       
         
         #Espera 60 milisegundos (framerate de 60)
@@ -174,6 +178,7 @@ class Game(object):
         return GAME_CONTINUE
              
     """desenha os objectos do jogo no frame corrente"""
+    @profile
     def render(self):
         #Desenha a imagem de fundo no ecra, na posicao 0,0
         self.screen.blit(self.bgImage, (0, 0))
@@ -437,6 +442,8 @@ class Game(object):
         self.XDist = 20
         self.YDist = -8            
         
+        player1_pos = (0,0)
+
         for player in self.players:
             
             if self.player == player:
